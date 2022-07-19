@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    --Orange: #fb7413;
+    ---White: #ffffff;
+    ---LightGrey: #959eac;
+    ---MediumGrey: rgb(124, 135, 152, .1);
+    ---paraGrey: rgb(124, 135, 152, 1);
+    ---DarkBlue: #252d37;
+    ---VeryDarkBlue: #121417;
+    height: 100vh;
+    background-color: var(---VeryDarkBlue);
+    color: var(---White);
+}
+
+body {
+    ---paragraph: 15px;
+    font-family: 'Overpass', sans-serif;
+    ---fw: 800;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+div#component {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#front-card,
+#back-card {
+    background-color: var(---DarkBlue);
+    max-width: 400px;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    transition: all ease;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#front-card>img {
+    background-color: var(---MediumGrey);
+    padding: 0.9rem;
+    border-radius: 50%;
+}
+
+#front-card>h2 {
+    margin: 1rem 0;
+    font-weight: 600;
+}
+
+#front-card>p,
+#back-card>p {
+    color: var(---paraGrey);
+    font-size: var(---paragraph);
+    max-width: 300px;
+}
+
+#front-card>ul {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#front-card>ul li {
+    background-color: var(---MediumGrey);
+    padding: 15px 20px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+#front-card>ul li:first-child {
+    padding: 15px 22.5px;
+}
+
+
+#front-card>ul li:hover {
+    background-color: #fb7413;
+    cursor: pointer;
+}
+
+#front-card>ul li:active,
+li:focus {
+    background-color: var(---LightGrey);
+    cursor: pointer;
+}
+
+
+
+#front-card>button {
+    background-color: var(--Orange);
+    width: 100%;
+    padding: 1rem;
+    border-radius: 40px;
+    color: white;
+    font-family: Overpass;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+    font-size: var(---paragraph);
+}
+
+
+#back-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+#back-card>h4 {
+    font-weight: 400;
+    background-color: var(---MediumGrey);
+    padding: 0.5rem 0.7rem;
+    border-radius: 50px;
+    color: #fb7413;
+}
+
+#back-card>p {
+    max-width: 320px;
+}
+
+
+
+.attribution {
+
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    padding: 2rem;
+}
